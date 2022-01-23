@@ -12,6 +12,7 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
     id "com.github.ben-manes.versions" version "0.41.0"
     id "io.jooby.openAPI" version "${joobyVersion}"
+    id "com.heroku.sdk.heroku-gradle" version "2.0.0"
 }
 
 group "app"
@@ -75,5 +76,25 @@ joobyRun.dependsOn openAPI
 // Run openAPI task on build
 jar.dependsOn openAPI
 
-task stage(dependsOn: ['build', 'clean'])
-build.mustRunAfter clean
+heroku {
+    appName = "jooby-rx"
+}
+
+heroku {
+    includes = ["README.md"]
+}
+
+heroku {
+    includes = ["build/libs/webapi-1.0.0-all.jar"]
+    includeBuildDir = false
+}
+
+heroku {
+    jdkVersion = 8
+}
+
+heroku {
+    processTypes(
+            web: "java -jar build/libs/webapi-1.0.0-all.jar"
+    )
+}
