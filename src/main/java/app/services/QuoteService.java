@@ -8,23 +8,23 @@ import io.reactivex.Single;
 @Singleton
 public class QuoteService {
 
-    QuoteClient quoteClient;
+	QuoteClient quoteClient;
 
-    @Inject
-    public QuoteService(QuoteClient quoteClient) {
-        this.quoteClient = quoteClient;
-    }
+	@Inject
+	public QuoteService(QuoteClient quoteClient) {
+		this.quoteClient = quoteClient;
+	}
 
-    public Single<QuoteDto> get() {
-        return this.quoteClient.getLatest().map(quoteResponse -> {
+	public Single<QuoteDto> get() {
+		return this.quoteClient.getLatest().map(quoteResponse -> {
 
-            QuoteDto quoteDto = new QuoteDto();
-            quoteDto.official = new QuoteDto.Official();
-            quoteDto.official.Buy = quoteResponse.oficial.ValueBuy;
-            quoteDto.official.Sell = quoteResponse.oficial.ValueSell;
+			QuoteDto quoteDto = new QuoteDto();
+			quoteDto.official = new QuoteDto.Official();
+			quoteDto.official.Buy = quoteResponse.oficial.ValueBuy;
+			quoteDto.official.Sell = quoteResponse.oficial.ValueSell;
 
-            return quoteDto;
-        });
-    }
+			return quoteDto;
+		});
+	}
 }
 

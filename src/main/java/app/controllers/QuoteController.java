@@ -13,15 +13,15 @@ import io.reactivex.Single;
 @Singleton
 public class QuoteController {
 
-    QuoteService quoteService;
+	QuoteService quoteService;
 
-    @Inject
-    public QuoteController(QuoteService quoteService) {
-        this.quoteService = quoteService;
-    }
+	@Inject
+	public QuoteController(QuoteService quoteService) {
+		this.quoteService = quoteService;
+	}
 
-    @GET
-    public Single<QuoteDto> get() {
-        return this.quoteService.get();
-    }
+	@GET
+	public Single<QuoteDto> get() {
+		return this.quoteService.get();
+	}
 }

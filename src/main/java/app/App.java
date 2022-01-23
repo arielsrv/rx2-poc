@@ -10,17 +10,17 @@ import io.jooby.json.JacksonModule;
 
 public class App extends Jooby {
 
-    {
-        ObjectMapper objectMapper = new ObjectMapperFactory().build();
-        install(new JacksonModule(objectMapper));
-        install(new GuiceModule(new AppInjectionModule()));
-        install(new OpenAPIModule());
+	{
+		ObjectMapper objectMapper = new ObjectMapperFactory().build();
+		install(new JacksonModule(objectMapper));
+		install(new GuiceModule(new AppInjectionModule()));
+		install(new OpenAPIModule());
 
-        mvc(QuoteController.class);
-        mvc(Controller.class);
-    }
+		mvc(QuoteController.class);
+		mvc(Controller.class);
+	}
 
-    public static void main(final String[] args) {
-        runApp(args, App::new);
-    }
+	public static void main(final String[] args) {
+		runApp(args, App::new);
+	}
 }
