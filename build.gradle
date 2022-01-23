@@ -77,4 +77,3 @@ jar.dependsOn openAPI
 
 task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
-
