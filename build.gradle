@@ -75,5 +75,5 @@ joobyRun.dependsOn openAPI
 // Run openAPI task on build
 jar.dependsOn openAPI
 
-task stage(dependsOn: ['joobyRun', 'build', 'clean'])
+task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
