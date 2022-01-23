@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/webapi-1.0.0-all.jar
