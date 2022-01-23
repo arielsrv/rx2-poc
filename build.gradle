@@ -1,0 +1,76 @@
+buildscript {
+    ext {
+        joobyVersion = "2.13.0"
+    }
+}
+
+plugins {
+    id "application"
+    id "io.jooby.run" version "${joobyVersion}"
+    id "io.spring.dependency-management" version "1.0.11.RELEASE"
+    id "com.google.osdetector" version "1.7.0"
+    id "com.github.johnrengelman.shadow" version "7.0.0"
+    id "com.github.ben-manes.versions" version "0.41.0"
+    id "io.jooby.openAPI" version "${joobyVersion}"
+}
+
+group "app"
+version "1.0.0"
+mainClassName = "app.App"
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "io.jooby:jooby-bom:$joobyVersion"
+    }
+}
+
+dependencies {
+    annotationProcessor "io.jooby:jooby-apt"
+    implementation "io.jooby:jooby-netty"
+    implementation "ch.qos.logback:logback-classic"
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.jooby:jooby-guice:2.13.0'
+    implementation 'io.jooby:jooby-jackson:2.13.0'
+
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.1.2'
+    implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.1.2'
+
+    implementation 'io.jooby:jooby-swagger-ui:2.13.0'
+    implementation 'io.jooby:jooby-redoc:2.13.0'
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine"
+    testImplementation "io.jooby:jooby-test"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+/** Java debug information: */
+tasks.withType(JavaCompile) {
+    options.compilerArgs += [
+            '-parameters',
+            '-Ajooby.incremental=true',
+            '-Ajooby.services=true',
+            '-Ajooby.debug=false'
+    ]
+    options.debug = true
+}
+
+shadowJar {
+    mergeServiceFiles()
+}
+
+// Run openAPI task on joobyRun
+joobyRun.dependsOn openAPI
+
+// Run openAPI task on build
+jar.dependsOn openAPI
+

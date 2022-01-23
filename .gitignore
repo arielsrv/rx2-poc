@@ -1,0 +1,33 @@
+.DS_Store
+
+*.class
+
+# Package Files #
+*.war
+*.ear
+!*gradle-wrapper.jar
+*.jar
+
+target/
+build/
+classes/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+.m2
+
+# gradle
+.gradle/
+
+*.log
+
+out/
+
+.classpath
+.project
+.settings/
+.vscode/
+bin/
