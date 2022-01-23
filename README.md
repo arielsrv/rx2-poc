@@ -1,6 +1,6 @@
-# webapi
+# jooby-rx
 
-Welcome to webapi!!
+Welcome to jooby-rx!!
 
 ## running
 

@@ -9,6 +9,7 @@ public class AppInjectionModule extends AbstractModule {
 
 	@Override
 	protected void configure() {
+
 		bind(RestClient.class).annotatedWith(Names.named("currency"))
 			.to(RestClient.class).in(Scopes.SINGLETON);
 
