@@ -47,6 +47,7 @@ dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter-api"
     testImplementation "org.junit.jupiter:junit-jupiter-engine"
     testImplementation "io.jooby:jooby-test"
+    testImplementation "com.squareup.okhttp3:okhttp"
 }
 
 test {
