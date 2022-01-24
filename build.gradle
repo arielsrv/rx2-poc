@@ -12,6 +12,7 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
     id "com.github.ben-manes.versions" version "0.41.0"
     id "io.jooby.openAPI" version "${joobyVersion}"
+    id "jacoco"
 }
 
 group "app"
@@ -52,6 +53,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    finalizedBy jacocoTestReport // report is always generated after tests run
 }
 
 /** Java debug information: */
@@ -77,3 +79,18 @@ jar.dependsOn openAPI
 
 task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
+
+jacoco {
+    toolVersion = "0.8.7"
+    reportsDirectory = file("$buildDir/reports/jacoco")
+}
+
+jacocoTestReport { // ./gradlew test jacocoTestReport from CLI
+    dependsOn test // tests are required to run before generating the report
+    group = "Reporting"
+    reports {
+        xml.enabled true // needed for coverage
+        csv.enabled false
+        html.destination file("${buildDir}/reports/coverage")
+    }
+}
