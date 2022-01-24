@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+jooby-rx,app,App,4,43,0,0,2,8,1,1,1,1
+jooby-rx,app,AppInjectionModule,0,24,0,0,0,6,0,2,0,2
+jooby-rx,app,Controller,0,5,0,0,0,2,0,2,0,2
+jooby-rx,app.controllers,QuoteController,10,0,0,0,4,0,2,0,2,0
+jooby-rx,app.common,RestClient.new FutureCallback() {...},56,0,0,0,8,0,4,0,4,0
+jooby-rx,app.common,Client,9,0,0,0,4,0,1,0,1,0
+jooby-rx,app.common,RestClient,86,0,0,0,23,0,3,0,3,0
+jooby-rx,app.common,Response,6,0,0,0,2,0,2,0,2,0
+jooby-rx,app.common,ObjectMapperFactory,0,64,0,0,0,14,0,2,0,2
+jooby-rx,app.clients,QuoteResponse.Oficial,3,0,0,0,1,0,1,0,1,0
+jooby-rx,app.clients,QuoteResponse,3,0,0,0,1,0,1,0,1,0
+jooby-rx,app.clients,QuoteClient,15,0,0,0,5,0,2,0,2,0
+jooby-rx,app.services,QuoteDto,3,0,0,0,1,0,1,0,1,0
+jooby-rx,app.services,QuoteDto.Official,3,0,0,0,1,0,1,0,1,0
+jooby-rx,app.services,QuoteService,35,0,0,0,9,0,3,0,3,0

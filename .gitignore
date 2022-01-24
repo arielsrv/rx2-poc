@@ -31,3 +31,5 @@ out/
 .settings/
 .vscode/
 bin/
+
+!build/reports/jacoco/test/jacocoTestReport.csv
