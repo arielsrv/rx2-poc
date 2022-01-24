@@ -1,6 +1,6 @@
 # jooby-rx
-
 Welcome to jooby-rx!!
+![Coverage](.github/badges/jacoco.svg)
 
 ## running
 
