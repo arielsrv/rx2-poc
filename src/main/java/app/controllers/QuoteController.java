@@ -21,7 +21,7 @@ public class QuoteController {
 		this.quoteService = quoteService;
 	}
 
-	@Trace(dispatcher = true)
+	@Trace(metricName = "/currency", dispatcher = true)
 	@GET
 	public Single<QuoteDto> get() {
 		return this.quoteService.get();
