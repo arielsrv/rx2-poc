@@ -4,6 +4,7 @@ import app.services.QuoteDto;
 import app.services.QuoteService;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import com.newrelic.api.agent.Trace;
 import io.jooby.annotations.GET;
 import io.jooby.annotations.Path;
 import io.reactivex.Single;
@@ -20,6 +21,7 @@ public class QuoteController {
 		this.quoteService = quoteService;
 	}
 
+	@Trace
 	@GET
 	public Single<QuoteDto> get() {
 		return this.quoteService.get();

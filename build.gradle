@@ -45,6 +45,8 @@ dependencies {
     implementation 'io.jooby:jooby-swagger-ui:2.13.0'
     implementation 'io.jooby:jooby-redoc:2.13.0'
 
+    implementation group: 'com.newrelic.agent.java', name: 'newrelic-api', version: '7.5.0'
+
     testImplementation "org.junit.jupiter:junit-jupiter-api"
     testImplementation "org.junit.jupiter:junit-jupiter-engine"
     testImplementation "io.jooby:jooby-test"
