@@ -21,7 +21,7 @@ public class QuoteController {
 		this.quoteService = quoteService;
 	}
 
-	@Trace
+	@Trace(dispatcher = true)
 	@GET
 	public Single<QuoteDto> get() {
 		return this.quoteService.get();
