@@ -11,7 +11,7 @@
            1. [Menu](#menu)
            2. [Podman](#podman)
      2. [Installing on macOS](#installing-on-macos) 
-  4. [Checking environment](#checking-environment)
+  3. [Checking environment](#checking-environment)
 
 **[back to top](#table-of-contents)**
 
