@@ -7,10 +7,10 @@
   1. [Getting Started](#getting-started)
   2. [Installing](#installing)
      1. [Installing on Linux or Windows](#installing-on-linux-or-windows)
-        1. [Installing Podman + Docker Compose](#instaling-podman-docker-compose)
-           1. [Menu](#menu)
-           2. [Podman](#podman)
-     2. [Installing on macOS](#installing-on-macos) 
+     2. [Installing Podman + Docker Compose](#instaling-podman-docker-compose)
+        1. [Menu](#menu)
+        2. [Podman](#podman)
+     3. [Installing on macOS](#installing-on-macos) 
   4. [Checking environment](#checking-environment)
 
 **[back to top](#table-of-contents)**
