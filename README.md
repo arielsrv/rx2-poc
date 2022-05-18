@@ -7,7 +7,7 @@
   1. [Getting Started](#getting-started)
   2. [Installing](#installing)
      1. [Installing on Linux or Windows](#installing-on-linux-or-windows)
-        1. [Installing Podman + Docker Compose](#installing-podman-+-docker-compose)
+        1. [Installing Podman and Docker Compose](#installing-podman-and-docker-compose)
            1. [Menu](#menu)
            2. [Podman](#podman)
      2. [Installing on macOS](#installing-on-macos) 
@@ -36,7 +36,7 @@ This repo help you about how you may give instructions on setting up your local 
    wsl.exe --set-version Ubuntu-20.04 2
    ```
 
-#### Installing Podman + Docker Compose
+#### Installing Podman and Docker Compose
 
 ##### Menu
 Current options when you execute the next command:
