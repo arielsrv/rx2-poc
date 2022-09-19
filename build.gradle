@@ -10,7 +10,7 @@ plugins {
     id "io.spring.dependency-management" version "1.0.11.RELEASE"
     id "com.google.osdetector" version "1.7.0"
     id "com.github.johnrengelman.shadow" version "7.1.2"
-    id "com.github.ben-manes.versions" version "0.41.0"
+    id "com.github.ben-manes.versions" version "0.42.0"
     id "io.jooby.openAPI" version "${joobyVersion}"
     id "jacoco"
 }
