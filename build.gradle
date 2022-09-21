@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        joobyVersion = "2.13.0"
+        joobyVersion = "2.16.1"
     }
 }
 
@@ -40,7 +40,7 @@ dependencies {
     implementation 'io.jooby:jooby-jackson:2.13.0'
 
     implementation 'org.apache.httpcomponents.client5:httpclient5:5.1.2'
-    implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.1.2'
+    implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.1.3'
 
     implementation 'io.jooby:jooby-swagger-ui:2.13.0'
     implementation 'io.jooby:jooby-redoc:2.13.0'
