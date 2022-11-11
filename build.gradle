@@ -40,7 +40,7 @@ dependencies {
     implementation 'io.jooby:jooby-jackson:2.16.1'
 
     implementation 'org.apache.httpcomponents.client5:httpclient5:5.2'
-    implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.1.3'
+    implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.2'
 
     implementation 'io.jooby:jooby-swagger-ui:2.16.1'
     implementation 'io.jooby:jooby-redoc:2.16.1'
