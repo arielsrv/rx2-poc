@@ -42,7 +42,7 @@ dependencies {
     implementation 'org.apache.httpcomponents.client5:httpclient5:5.2.1'
     implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.2.1'
 
-    implementation 'io.jooby:jooby-swagger-ui:2.16.1'
+    implementation 'io.jooby:jooby-swagger-ui:2.16.2'
     implementation 'io.jooby:jooby-redoc:2.16.1'
 
     implementation group: 'com.newrelic.agent.java', name: 'newrelic-api', version: '8.0.0'
